@@ -40,7 +40,7 @@ class ProfilePage extends Component {
   renderActiveProfile = () => {
     return (
       <div className="welcome-text">
-        <Tag color="green" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: 'fit-content'}}>
+        <Tag color="green" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: 'fit-content', fontSize: '14px'}}>
           <HeartFilled style={{marginRight: '10px'}}/>
           <div>Online</div>
         </Tag>
