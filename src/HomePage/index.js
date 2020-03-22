@@ -2,14 +2,21 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import axios from 'axios';
 
+import './index.css';
+
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { authUrl: null };
+  }
   async componentDidMount() {
-    this.getAuthUrl();
+    const authUrl = await this.getAuthUrl();
+    this.setState({ authUrl });
   }
 
   async getAuthUrl() {
-    const {data: {url}} = await axios.get("https://933a7619.ngrok.io/google/");
-    window.location = url;
+    const {data: {url}} = await axios.get("http://67f16f7d.ngrok.io/google/");
+    return url;
   }
 
   render() {
@@ -22,11 +29,11 @@ class HomePage extends Component {
           </p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href={ this.state.authUrl }
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Login
           </a>
         </header>
       </div>
