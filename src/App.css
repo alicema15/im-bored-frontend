@@ -3,6 +3,7 @@
 main {
   height: 100%;
   font-family: 'Muli', sans-serif;
+  background-color: #F7F7F7;
 }
 
 button.ant-btn-primary:hover {
