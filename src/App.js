@@ -3,7 +3,7 @@ import React from 'react';
 import mobiscroll from "@mobiscroll/react";
 import "@mobiscroll/react/dist/css/mobiscroll.min.css";
 
-import { Route, Switch, Link, withRouter } from 'react-router-dom';
+import { Route, Switch, Link, withRouter, Redirect } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb, Tag, Button, Input } from 'antd';
 
 
@@ -21,7 +21,7 @@ function App() {
     <main>
       <Layout className="App">
         <Header className="header">
-          <img className="logo" src="sm-logo-w-no-bg.png" onClick={() => { this.props.history.push('/') }}/>
+          <img className="logo" src="sm-logo-w-no-bg.png" onClick={() => { return <Redirect to="/"/> }}/>
         </Header>
         <Switch>
           <Route path="/" component={ ProfilePage } exact />

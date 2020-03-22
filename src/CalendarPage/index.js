@@ -52,12 +52,11 @@ class CalendarPage extends Component {
                 }}
                 style={{ height: '500px' }}
             />
-          <Button type="primary" onClick={ this.routeChange }>Submit</Button>
+          <Button type="primary" onClick={ this.routeChange }>Confirm Availability</Button>
         </div>
       </Content>
     )
   }
-
 }
 
 export default withRouter(CalendarPage);

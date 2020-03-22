@@ -42,6 +42,16 @@ main {
   height: 100%;
 }
 
+button:hover {
+  background-color: #FF00D4 !important;
+  border-color: #FF00D4 !important;
+}
+
+button {
+  background-color: #00DDFF !important;
+  border-color: #00DDFF !important;
+}
+
 .App {
   height: 100%;
   overflow: hidden
