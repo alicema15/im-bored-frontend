@@ -13,12 +13,17 @@ const { Search } = Input;
 class ProfilePage extends Component {
   constructor(props) {
     super(props);
-    this.state = { authUrl: null };
+    this.state = { 
+      authUrl: null,
+      profileFirstName: 'Alice',
+      recipientFirstName: 'Ashita',
+      confirmedTime: '1:30pm PST'
+    };
   }
   async componentDidMount() {
     // const authUrl = await this.getAuthUrl();
     const authUrl = '';
-    this.setState({ authUrl });
+    this.setState({...this.state, authUrl });
   }
 
   async getAuthUrl() {
@@ -34,10 +39,10 @@ class ProfilePage extends Component {
     return (
       <div className="welcome-text">
         <Tag color="green">Online</Tag>
-        <div className="header-text">Alice is available to chat today</div>
+        <div className="header-text">{this.state.profileFirstName} is available to chat today</div>
         <p className="sub-text">Sync your calendar and we'll find the best time to chat.</p>
         {/*<Button type="primary" onClick={ this.routeChange }>Talk to Alice</Button>*/}
-        <Button type="primary" onClick={ () => { this.props.history.push('/phone-number') }}>Talk to Alice</Button>
+        <Button type="primary" onClick={ () => { this.props.history.push('/phone-number') }}>Talk to {this.state.profileFirstName}</Button>
       </div>
     );
   }
@@ -47,7 +52,7 @@ class ProfilePage extends Component {
   renderPhoneNumber = () => {
     return (
       <div className="welcome-text">
-        <div className="header-text">Hi Ashita! What is a good phone number for Alice to reach you?</div>
+        <div className="header-text">Hi {this.state.recipientFirstName}! What is a good phone number for {this.state.profileFirstName} to reach you?</div>
         <br />
         <Search
           placeholder="e.g. 123-456-1289"
@@ -63,7 +68,7 @@ class ProfilePage extends Component {
   renderThankYou() {
     return (
       <div className="welcome-text">
-        <div className="header-text">Super! Alice and you are set to talk at 1:30pm PST. She will text you a Google Link.</div>
+        <div className="header-text">Super! {this.state.profileFirstName} and you are set to talk at {this.state.confirmedTime}. She will text you a Google Link.</div>
       </div> 
     );
   }
