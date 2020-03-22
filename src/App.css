@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+main {
+  height: 100%;
+  font-family: 'Muli', sans-serif;
+}
+
+button:hover {
+  background-color: #FF00D4 !important;
+  border-color: #FF00D4 !important;
+}
+
+button {
+  background-color: #00DDFF !important;
+  border-color: #00DDFF !important;
+}
+
+.App {
+  height: 100%;
+  overflow: hidden
+}
+
+.header {
+  height: 64px;
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.logo {
+  /*width: 120px;*/
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  /*margin: 16px 24px 16px 0;*/
+  text-align: center;
+}
+
+.footer {
+  background-color: #373F41;
+}
+
 /*.App {
   text-align: center;
 }
@@ -37,42 +79,3 @@
   }
 }
 */
-
-main {
-  height: 100%;
-}
-
-button:hover {
-  background-color: #FF00D4 !important;
-  border-color: #FF00D4 !important;
-}
-
-button {
-  background-color: #00DDFF !important;
-  border-color: #00DDFF !important;
-}
-
-.App {
-  height: 100%;
-  overflow: hidden
-}
-
-.header {
-  height: 64px;
-  background-color: white;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
-.logo {
-  /*width: 120px;*/
-  height: 50px;
-  background: rgba(255, 255, 255, 0.2);
-  /*margin: 16px 24px 16px 0;*/
-  text-align: center;
-}
-
-.footer {
-  background-color: #373F41;
-}
