@@ -4,6 +4,7 @@
 
 .App {
   height: 100%;
+  overflow: hidden
 }
 
 .header {
@@ -21,8 +22,16 @@
   align-items: center;
 }
 
+.device-container{  
+  padding-top: 50px;
+}
+/*.device {
+  height: 50%;
+}*/
 .welcome-text {
-
+  margin-top: -100px;
+  line-height: 2rem;
+  text-align: left;
 }
 
 .header-text {
@@ -40,4 +49,8 @@ button {
 .footer {
   height: 100px;
   background-color: gray;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
 }
