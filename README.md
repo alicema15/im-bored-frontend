@@ -13,6 +13,16 @@ Starts the application on localhost:3000
 ### `npm install --save PACKAGE_NAME`
 Installs a package and saves it to package.json.
 
+## Deployment
+
+Install Heroku [here](https://dashboard.heroku.com/apps/im-bored-1516/deploy/heroku-git).
+
+Run these commands to initiate:
+`$ https://dashboard.heroku.com/apps/im-bored-1516/deploy/heroku-git`
+
+Run this command to deploy:
+`git push heroku master`
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
