@@ -41,3 +41,13 @@
 main {
   height: 100%;
 }
+
+.App {
+  height: 100%;
+  overflow: hidden
+}
+
+.header {
+  line-height: 64px;
+  background-color: white;
+}

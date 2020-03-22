@@ -2,16 +2,6 @@
   height: 100%;
 }
 
-.App {
-  height: 100%;
-  overflow: hidden
-}
-
-.header {
-  line-height: 64px;
-  background-color: white;
-}
-
 .content {
   padding: 0 50px;
   min-height: 380px;
@@ -35,7 +25,7 @@
 }
 
 .header-text {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .sub-text {
