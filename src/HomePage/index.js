@@ -16,7 +16,8 @@ class HomePage extends Component {
     this.state = { authUrl: null };
   }
   async componentDidMount() {
-    const authUrl = await this.getAuthUrl();
+    // const authUrl = await this.getAuthUrl();
+    const authUrl = '';
     this.setState({ authUrl });
   }
 
