@@ -8,7 +8,7 @@ class GetStartedPage extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      authUrl: null,
+      authUrl: 'google.com',
       profileFirstName: 'Alice',
       recipientFirstName: 'Ashita',
       confirmedTime: '1:30pm PST'

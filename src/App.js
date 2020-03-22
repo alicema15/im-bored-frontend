@@ -36,9 +36,11 @@ function App() {
       </Layout>
       <Footer className="footer">
         <div className="row">
-          <div className="col col-md-6">
-            <div style={{color: '#C3CBCD', fontSize: '18px', marginBottom: '10px', alignSelf: 'start'}}>Join our Beta</div>
-            <Search enterButton="Submit" size="small" type="secondary" style={{width: '50%'}} />
+          <div className="col col-md-6" style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <div className="subscribe-container" style={{display: 'flex', alignItems:'flex-start', justifyContent:'center', flexDirection:'column', width: '300px'}}>
+              <div style={{color: '#C3CBCD', fontSize: '18px', marginBottom: '10px'}}>Join our Beta</div>
+              <Search enterButton="Submit" size="small" type="secondary" style={{width: '100%'}} />
+            </div>
           </div>
           <div className="col col-md-6">
           </div>
