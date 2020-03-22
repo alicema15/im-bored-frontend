@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
+import axios from 'axios';
 
 class HomePage extends Component {
+  async componentDidMount() {
+    this.getAuthUrl();
+  }
+
+  async getAuthUrl() {
+    const {data: {url}} = await axios.get("https://933a7619.ngrok.io/google/");
+    window.location = url;
+  }
+
   render() {
     return (
       <div className="App">
