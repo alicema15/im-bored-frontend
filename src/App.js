@@ -12,6 +12,8 @@ import CalendarPage from './CalendarPage';
 import TimesPage from './TimesPage';
 import GetStartedPage from './GetStartedPage';
 
+import axios from 'axios';
+
 import './App.css';
 const { Header, Footer } = Layout;
 const { Search } = Input;
@@ -36,7 +38,7 @@ function App() {
         <div className="row">
           <div className="col col-md-6">
             <div style={{color: '#C3CBCD', fontSize: '18px', marginBottom: '10px', alignSelf: 'start'}}>Join our Beta</div>
-            <Search enterButton="Submit" size="small" type="secondary" style={{width: '50%'}}/>
+            <Search enterButton="Submit" size="small" type="secondary" style={{width: '50%'}} />
           </div>
           <div className="col col-md-6">
           </div>

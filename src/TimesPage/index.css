@@ -1,6 +1,9 @@
 .times-container {
   margin-top: 30px;
+  margin-left: 5px;
+  font-size: 16px;
 }
+
 .list-item {
   display: flex;
   flex-direction: row;
@@ -10,7 +13,7 @@
 }
 
 .icon {
-  font-size: 16px;
+  font-size: 18px;
   color: #00DDFF;
   margin-right: 10px;
 }
