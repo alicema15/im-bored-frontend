@@ -26,7 +26,7 @@ class CalendarPage extends Component {
 
   async retrieveAccessToken() {
     const {code} = queryString.parse(window.location.search);
-    await axios.post("http://67f16f7d.ngrok.io/google/access-token", {
+    await axios.post("https://morning-plateau-28342.herokuapp.com/google/access-token", {
       authCode: code
     });
   }

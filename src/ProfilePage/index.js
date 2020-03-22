@@ -23,13 +23,13 @@ class ProfilePage extends Component {
     };
   }
   async componentDidMount() {
-    // const authUrl = await this.getAuthUrl();
-    const authUrl = '';
+    const authUrl = await this.getAuthUrl();
+    // const authUrl = '';
     this.setState({...this.state, authUrl });
   }
 
   async getAuthUrl() {
-    const {data: {url}} = await axios.get("http://67f16f7d.ngrok.io/google/");
+    const {data: {url}} = await axios.get("https://morning-plateau-28342.herokuapp.com/google/");
     return url;
   }
 
@@ -47,7 +47,7 @@ class ProfilePage extends Component {
         <div className="header-text">{this.state.profileFirstName} is available to chat today</div>
         <div className="sub-text">Sync your calendar and we'll find the best time to chat.</div>
         {/*<Button type="primary" onClick={ this.routeChange }>Talk to Alice</Button>*/}
-        <Button type="primary" onClick={ () => { this.props.history.push('/phone-number') }}>Talk to {this.state.profileFirstName}</Button>
+        <Button type="primary" onClick={ () => { this.routeChange() }}>Talk to {this.state.profileFirstName}</Button>
       </div>
     );
   }

@@ -8,7 +8,7 @@ class GetStartedPage extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      authUrl: 'google.com',
+      authUrl: null,
       profileFirstName: 'Alice',
       recipientFirstName: 'Ashita',
       confirmedTime: '1:30pm PST'
@@ -21,16 +21,17 @@ class GetStartedPage extends Component {
   }
 
   async getAuthUrl() {
-    const {data: {url}} = await axios.get("http://67f16f7d.ngrok.io/google/");
+    const {data: {url}} = await axios.get("https://morning-plateau-28342.herokuapp.com/google/");
     return url;
   }
 
   routeChange = () => {
-    // window.location.href = this.state.authUrl;
+    window.location.href = this.state.authUrl;
   }
 
   render() {
     if (this.state.authUrl) {
+      this.routeChange();
       return (
         <Redirect to={this.state.authUrl} />
       )      
