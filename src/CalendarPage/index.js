@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import queryString from 'query-string';
 import axios from 'axios';
 
 import mobiscroll from "@mobiscroll/react";
-import { Layout } from 'antd';
+import { Layout, Button } from 'antd';
 const { Content } = Layout;
 
 class CalendarPage extends Component {
@@ -30,23 +31,28 @@ class CalendarPage extends Component {
     });
   }
 
+  routeChange = () => {
+    this.props.history.push('/youre-set');
+  }
+
   render() {
     return (
       <Content className='vertical-center' style={{marginTop: '-100px'}} >
         <div style={{margin: 'auto', width: '500px'}}>
           <div className='header-text'>When are you available to chat today?</div>
           <br/>
-            <mobiscroll.Eventcalendar
-                  theme="ios" 
-                  themeVariant="light"
-                  display="inline"
-                  data={this.state.myEvents}
-                  view={{
-                      calendar: { type: 'week' },
-                      eventList: { type: 'day', scrollable: true  }
-                  }}
-                  style={{ height: '500px' }}
-              />
+          <mobiscroll.Eventcalendar
+                theme="ios" 
+                themeVariant="light"
+                display="inline"
+                data={this.state.myEvents}
+                view={{
+                    calendar: { type: 'week' },
+                    eventList: { type: 'day', scrollable: true  }
+                }}
+                style={{ height: '500px' }}
+            />
+          <Button type="primary" onClick={ this.routeChange }>Submit</Button>
         </div>
       </Content>
     )
@@ -54,4 +60,4 @@ class CalendarPage extends Component {
 
 }
 
-export default CalendarPage;
+export default withRouter(CalendarPage);
