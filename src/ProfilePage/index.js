@@ -36,7 +36,8 @@ class ProfilePage extends Component {
         <Tag color="green">Online</Tag>
         <div className="header-text">Alice is available to chat today</div>
         <p className="sub-text">Sync your calendar and we'll find the best time to chat.</p>
-        <Button type="primary" onClick={ this.routeChange }>Talk to Alice</Button>
+        {/*<Button type="primary" onClick={ this.routeChange }>Talk to Alice</Button>*/}
+        <Button type="primary" onClick={ () => { this.props.history.push('/phone-number') }}>Talk to Alice</Button>
       </div>
     );
   }
