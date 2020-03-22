@@ -26,10 +26,12 @@
 
 .header-text {
   font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .sub-text {
-
+  margin-bottom: 20px;
 }
 
 button {

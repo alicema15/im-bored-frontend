@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb, Tag, Button, Input } from 'antd';
 
+import {HeartFilled} from '@ant-design/icons';
+
 import Device from "react-device-frame";
 import axios from 'axios';
 
@@ -38,9 +40,12 @@ class ProfilePage extends Component {
   renderActiveProfile = () => {
     return (
       <div className="welcome-text">
-        <Tag color="green">Online</Tag>
+        <Tag color="green" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: 'fit-content'}}>
+          <HeartFilled style={{marginRight: '10px'}}/>
+          <div>Online</div>
+        </Tag>
         <div className="header-text">{this.state.profileFirstName} is available to chat today</div>
-        <p className="sub-text">Sync your calendar and we'll find the best time to chat.</p>
+        <div className="sub-text">Sync your calendar and we'll find the best time to chat.</div>
         {/*<Button type="primary" onClick={ this.routeChange }>Talk to Alice</Button>*/}
         <Button type="primary" onClick={ () => { this.props.history.push('/phone-number') }}>Talk to {this.state.profileFirstName}</Button>
       </div>
