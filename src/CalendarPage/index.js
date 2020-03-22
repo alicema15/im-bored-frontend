@@ -37,9 +37,11 @@ class CalendarPage extends Component {
 
   render() {
     return (
-      <Content className='vertical-center' style={{marginTop: '-100px'}} >
-        <div style={{margin: 'auto', width: '500px'}}>
-          <div className='header-text'>When are you available to chat today?</div>
+      <Content className='vertical-center' style={{marginTop: '-200px'}} >
+        <div className='container' style={{margin: 'auto', width: '600px'}}>
+          <div className='row'>
+            <div className='col col-md-12 header-text'>When are you available to chat today?</div>
+          </div>
           <br/>
           <mobiscroll.Eventcalendar
                 theme="ios" 
@@ -50,8 +52,9 @@ class CalendarPage extends Component {
                     calendar: { type: 'week' },
                     eventList: { type: 'day', scrollable: true  }
                 }}
-                style={{ height: '500px' }}
+                style={{ height: '500px'}}
             />
+          <br/>
           <Button type="primary" onClick={ this.routeChange }>Confirm Availability</Button>
         </div>
       </Content>

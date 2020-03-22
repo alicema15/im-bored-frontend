@@ -23,7 +23,9 @@ function App() {
     <main>
       <Layout className="App">
         <Header className="header">
-          <img className="logo" src="sm-logo-w-no-bg.png" onClick={() => { return <Redirect to="/"/> }}/>
+          <Link to="/" style={{display:'flex'}}>
+            <img className="logo" src="sm-logo-w-no-bg.png" />
+          </Link>
         </Header>
         <Switch>
           <Route path="/" component={ ProfilePage } exact />

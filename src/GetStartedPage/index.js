@@ -15,13 +15,12 @@ class GetStartedPage extends Component {
     };
   }
   async componentDidMount() {
-    // const authUrl = await this.getAuthUrl();
-    const authUrl = '';
+    const authUrl = await this.getAuthUrl();
     this.setState({...this.state, authUrl });
   }
 
   async getAuthUrl() {
-    const {data: {url}} = await axios.get("https://morning-plateau-28342.herokuapp.com/google/");
+    const {data: {url}} = await axios.get("https://morning-plateau-28342.herokuapp.com/google/cal-auth");
     return url;
   }
 

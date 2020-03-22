@@ -25,7 +25,7 @@ class TimesPage extends Component {
 
   render() {
     return (
-      <Content className='vertical-center' style={{marginTop: '-100px'}} >
+      <Content className='vertical-center' style={{marginTop: '-200px'}} >
         <div style={{margin: 'auto'}}>
           <div className='header-text' style={{textAlign: 'left'}}>Great, you're all set</div>
           <div className='times-container'>
