@@ -10,6 +10,7 @@ import { Layout, Menu, Breadcrumb, Tag, Button } from 'antd';
 import ProfilePage from './ProfilePage';
 import CalendarPage from './CalendarPage';
 import TimesPage from './TimesPage';
+import GetStartedPage from './GetStartedPage';
 
 import './App.css';
 const { Header, Footer } = Layout;
@@ -27,6 +28,7 @@ function App() {
           <Route path="/thank-you" component={ ProfilePage } />
           <Route path="/calendar" component={ CalendarPage } exact />
           <Route path="/youre-set" component={ TimesPage } exact />
+          <Route path="/get-started" component={ GetStartedPage } exact />
         </Switch>
       </Layout>
       <Footer className="footer">Footer</Footer>
