@@ -1,0 +1,56 @@
+.h-100 {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  overflow: hidden
+}
+
+.header {
+  line-height: 64px;
+  background-color: white;
+}
+
+.content {
+  padding: 0 50px;
+  min-height: 380px;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.device-container{  
+  padding-top: 50px;
+}
+/*.device {
+  height: 50%;
+}*/
+.welcome-text {
+  margin-top: -100px;
+  line-height: 2rem;
+  text-align: left;
+}
+
+.header-text {
+  font-size: 36px;
+}
+
+.sub-text {
+
+}
+
+button {
+
+}
+
+.footer {
+  height: 100px;
+  background-color: gray;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+}
