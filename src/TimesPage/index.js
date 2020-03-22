@@ -45,7 +45,7 @@ class TimesPage extends Component {
               <div>{this.state.timeZone}</div>
             </div>
           </div>
-          <Button style={{marginTop: '30px'}} onClick={() => { this.props.history.push('/')}}>View Your Profile</Button>
+          <Button className='btn-secondary' style={{marginTop: '30px'}} onClick={() => { this.props.history.push('/')}}>View Your Profile</Button>
           <br/>
         </div>
       </Content>

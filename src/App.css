@@ -5,14 +5,19 @@ main {
   font-family: 'Muli', sans-serif;
 }
 
-button:hover {
+button.ant-btn-primary:hover {
   background-color: #FF00D4 !important;
   border-color: #FF00D4 !important;
 }
 
-button {
+button.ant-btn-primary {
   background-color: #00DDFF !important;
   border-color: #00DDFF !important;
+}
+
+button.btn-secondary:hover {
+  color: #FF00D4 !important;
+  border-color: #FF00D4 !important;
 }
 
 .App {
