@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+import { Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import './index.css';
@@ -19,26 +19,32 @@ class HomePage extends Component {
     return url;
   }
 
+  routeChange = () => {
+    window.location.href = this.state.authUrl;
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href={ this.state.authUrl }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Login
-          </a>
-        </header>
+        <div className="header">Header</div>
+        <div className="container">
+          <div className="row">
+            <div className="col col-md-4">
+              <div>Photo</div>
+            </div>
+            <div className="col col-md-8">
+              <div className="welcome-text">
+                <div className="header-text">Alice is available to chat today</div>
+                <div className="sub-text">Sync your calendar and we'll find the best time to chat.</div>
+                <button onClick={ this.routeChange }>Talk to Alice</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="footer">Footer</div>
       </div>
     );
   }
 }
 
-export default HomePage;
+export default withRouter(HomePage);
