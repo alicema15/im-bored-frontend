@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { Layout, Menu, Breadcrumb, Tag, Button } from 'antd';
 import axios from 'axios';
 
 import './index.css';
+
+const { Header, Content, Footer } = Layout;
+
 
 class HomePage extends Component {
   constructor(props) {
@@ -25,24 +29,25 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="header">Header</div>
-        <div className="container">
-          <div className="row">
-            <div className="col col-md-4">
+      <Layout className="App">
+        <Header className="header">Header</Header>
+        <Content className="content h-100">
+          <div className="row h-100">
+            <div className="col col-md-6">
               <div>Photo</div>
             </div>
-            <div className="col col-md-8">
+            <div className="col col-md-6 vertical-center h-100">
               <div className="welcome-text">
+                <Tag color="green">Online</Tag>
                 <div className="header-text">Alice is available to chat today</div>
                 <div className="sub-text">Sync your calendar and we'll find the best time to chat.</div>
-                <button onClick={ this.routeChange }>Talk to Alice</button>
+                <Button type="primary" onClick={ this.routeChange }>Talk to Alice</Button>
               </div>
             </div>
           </div>
-        </div>
-        <div className="footer">Footer</div>
-      </div>
+        </Content>
+        <Footer className="footer">Footer</Footer>
+      </Layout>
     );
   }
 }
