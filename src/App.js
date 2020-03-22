@@ -4,7 +4,7 @@ import mobiscroll from "@mobiscroll/react";
 import "@mobiscroll/react/dist/css/mobiscroll.min.css";
 
 import { Route, Switch, Link, withRouter } from 'react-router-dom';
-import { Layout, Menu, Breadcrumb, Tag, Button } from 'antd';
+import { Layout, Menu, Breadcrumb, Tag, Button, Input } from 'antd';
 
 
 import ProfilePage from './ProfilePage';
@@ -14,6 +14,7 @@ import GetStartedPage from './GetStartedPage';
 
 import './App.css';
 const { Header, Footer } = Layout;
+const { Search } = Input;
 
 function App() {
   return (
@@ -31,7 +32,16 @@ function App() {
           <Route path="/get-started" component={ GetStartedPage } exact />
         </Switch>
       </Layout>
-      <Footer className="footer">Footer</Footer>
+      <Footer className="footer">
+        <div className="row">
+          <div className="col col-md-6">
+            <div style={{color: '#C3CBCD', fontSize: '18px', marginBottom: '10px', alignSelf: 'start'}}>Join our Beta</div>
+            <Search enterButton="Submit" size="small" type="secondary" style={{width: '50%'}}/>
+          </div>
+          <div className="col col-md-6">
+          </div>
+        </div>
+      </Footer>
     </main>
   );
 }
