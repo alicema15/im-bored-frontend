@@ -2,9 +2,25 @@ import React, { Component } from 'react';
 import queryString from 'query-string';
 import axios from 'axios';
 
+import mobiscroll from "@mobiscroll/react";
+import { Layout } from 'antd';
+const { Content } = Layout;
+
 class CalendarPage extends Component {
+  constructor(props) {
+      super(props);
+
+      this.state = {
+          myEvents: []
+      };
+      
+      mobiscroll.util.getJson('https://trial.mobiscroll.com/events/', (events) => {
+          this.setState({ myEvents: events });
+      }, 'jsonp');
+  }
+
   async componentDidMount() {
-    await this.retrieveAccessToken();
+    // await this.retrieveAccessToken();
   }
 
   async retrieveAccessToken() {
@@ -12,17 +28,27 @@ class CalendarPage extends Component {
     await axios.post("http://67f16f7d.ngrok.io/google/access-token", {
       authCode: code
     });
-
-    await axios.get('http://67f16f7d.ngrok.io/google/calendars');
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <div>Calendar</div>
-        </header>
-      </div>
+      <Content className='vertical-center' style={{marginTop: '-100px'}} >
+        <div style={{margin: 'auto', width: '500px'}}>
+          <div className='header-text'>When are you available to chat today?</div>
+          <br/>
+            <mobiscroll.Eventcalendar
+                  theme="ios" 
+                  themeVariant="light"
+                  display="inline"
+                  data={this.state.myEvents}
+                  view={{
+                      calendar: { type: 'week' },
+                      eventList: { type: 'day', scrollable: true  }
+                  }}
+                  style={{ height: '500px' }}
+              />
+        </div>
+      </Content>
     )
   }
 

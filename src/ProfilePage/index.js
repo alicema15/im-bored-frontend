@@ -42,7 +42,7 @@ class ProfilePage extends Component {
   }
 
   // TO-DO: submit phone number and THEN redirect
-  
+
   renderPhoneNumber = () => {
     return (
       <div className="welcome-text">
@@ -92,7 +92,7 @@ class ProfilePage extends Component {
               <div>Photo</div>
             </Device>
           </div>
-          <div className="col col-md-6 vertical-center h-100">
+          <div className="col col-md-6 vertical-center h-100" style={{paddingLeft: '30px'}}>
             { this.getBodySection() }
           </div>
         </div>
