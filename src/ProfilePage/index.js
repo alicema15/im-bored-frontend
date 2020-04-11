@@ -5,6 +5,7 @@ import { Layout, Menu, Breadcrumb, Tag, Button, Input } from 'antd';
 import {HeartFilled} from '@ant-design/icons';
 
 import Device from "react-device-frame";
+import { IPhoneX } from 'react-device-frames';
 import axios from 'axios';
 
 import './index.css';
@@ -29,7 +30,7 @@ class ProfilePage extends Component {
   }
 
   async getAuthUrl() {
-    const {data: {url}} = await axios.get("https://morning-plateau-28342.herokuapp.com/google/");
+    const { data: { url } } = await axios.get("https://morning-plateau-28342.herokuapp.com/google/");
     return url;
   }
 
@@ -98,12 +99,13 @@ class ProfilePage extends Component {
     return (
       <Content className="content h-100">
         <div className="row h-100">
-          <div className="col col-md-6 device-container">
-            <Device className="device" name="iphone-x" url="https://pbs.twimg.com/media/C5xHw4lXEAEAnNK.jpg">
+          <div className="col col-sm-6 device-container">
+            {/*<Device className="device" name="iphone-x" url="https://pbs.twimg.com/media/C5xHw4lXEAEAnNK.jpg">
               <div>Photo</div>
-            </Device>
+            </Device>*/}
+            <IPhoneX screenshot={"https://pbs.twimg.com/media/C5xHw4lXEAEAnNK.jpg"} />
           </div>
-          <div className="col col-md-6 vertical-center h-100" style={{paddingLeft: '30px'}}>
+          <div className="col col-sm-6 vertical-center h-100" style={{paddingLeft: '30px'}}>
             { this.getBodySection() }
           </div>
         </div>
