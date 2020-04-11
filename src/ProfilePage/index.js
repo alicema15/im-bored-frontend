@@ -97,15 +97,15 @@ class ProfilePage extends Component {
 
   render() {
     return (
-      <div className="container h-100 profile-body" style={{'overflow':'scroll'}}>
+      <div className="container h-100" style={{'overflow':'scroll'}}>
         <div className="row h-100">
-          <div className="col-md-5 device-container" style={{'padding': '40px'}}>
+          <div className="col-md-6 device-container" style={{'padding': '60px'}}>
             {/*<Device className="device" name="iphone-x" url="https://pbs.twimg.com/media/C5xHw4lXEAEAnNK.jpg">
               <div>Photo</div>
             </Device>*/}
             <IPhoneX screenshot={"https://pbs.twimg.com/media/C5xHw4lXEAEAnNK.jpg"} />
           </div>
-          <div className="col-md-6 offset-md-1 vertical-center h-100" >
+          <div className="col-md-6 vertical-center h-100" >
             { this.getBodySection() }
           </div>
         </div>

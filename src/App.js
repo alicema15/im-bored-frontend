@@ -21,7 +21,7 @@ const { Search } = Input;
 function App() {
   return (
     <main>
-      <Layout className="App">
+      <Layout className="App app-body">
         <Header className="header">
           <Link to="/" style={{display:'flex'}}>
             <img className="logo" src="sm-logo-w-no-bg.png" />

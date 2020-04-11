@@ -26,6 +26,10 @@ button.btn-secondary:hover {
   overflow: hidden
 }
 
+.app-body {
+  background-color: #f7f7f7 !important
+}
+
 .header {
   height: 64px;
   background-color: white;
