@@ -50,6 +50,12 @@ button.btn-secondary:hover {
   background-color: #373F41;
 }
 
+.success, .errorMsg {
+  color: white;
+  padding-left: 20px;
+  line-height: 2rem;
+}
+
 /*.App {
   text-align: center;
 }
