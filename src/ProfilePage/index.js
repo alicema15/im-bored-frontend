@@ -40,7 +40,7 @@ class ProfilePage extends Component {
 
   renderActiveProfile = () => {
     return (
-      <div className="welcome-text">
+      <div className="welcome-text container">
         <Tag color="green" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: 'fit-content', fontSize: '14px'}}>
           <HeartFilled style={{marginRight: '10px'}}/>
           <div>Online</div>
@@ -97,19 +97,19 @@ class ProfilePage extends Component {
 
   render() {
     return (
-      <Content className="content h-100">
+      <div className="container h-100" style={{'overflow':'scroll'}}>
         <div className="row h-100">
-          <div className="col col-sm-6 device-container">
+          <div className="col-md-5 device-container" style={{'padding': '40px'}}>
             {/*<Device className="device" name="iphone-x" url="https://pbs.twimg.com/media/C5xHw4lXEAEAnNK.jpg">
               <div>Photo</div>
             </Device>*/}
             <IPhoneX screenshot={"https://pbs.twimg.com/media/C5xHw4lXEAEAnNK.jpg"} />
           </div>
-          <div className="col col-sm-6 vertical-center h-100" style={{paddingLeft: '30px'}}>
+          <div className="col-md-6 offset-md-1 vertical-center h-100" >
             { this.getBodySection() }
           </div>
         </div>
-      </Content>
+      </div>
     );
   }
 }
