@@ -91,7 +91,7 @@ function App() {
                   <Input placeholder="Email" value={ serverState.formValue }/>
                 </Form.Item>
                 <Form.Item style={{'marginBottom': '0'}}>
-                  <Button htmlType="submit" type="primary" style={{'marginLeft':'-10px', 'height':'31px'}}>Submit</Button>
+                  <Button htmlType="submit" type="primary" style={{'marginLeft':'-10px'}}>Submit</Button>
                 </Form.Item>
                 {serverState.status && (
                   <p className={!serverState.status.ok ? "errorMsg" : "success"}>
